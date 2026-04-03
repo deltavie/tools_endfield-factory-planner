@@ -1670,7 +1670,7 @@
             }
         ]
     },
-    "Yazhen Solution [A]": {
+    "Yazhen Syringe [A]": {
         "Formulas": [
             {
                 "Ingredients": [
@@ -1687,7 +1687,7 @@
                 "CraftingTime": 10,
                 "Outputs": [
                     {
-                        "name": "Yazhen Solution [A]",
+                        "name": "Yazhen Syringe [A]",
                         "count": 1
                     }
                 ]
