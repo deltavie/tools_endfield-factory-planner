@@ -1,4 +1,5 @@
 import { Planner } from './endfield-factory-planner/Planner';
+import { Engine } from './game-engine/Engine';
 import './index.css';
 
 // Create factory planner object.
@@ -21,10 +22,12 @@ if (rootEl) {
       </div>
     </div>
     <div class="canvas">
-          <canvas id="output-canvas" width="4000px" height="3000px"></canvas>
+          <canvas id="output-canvas" width="1280px" height="720px"></canvas>
     </div>   
   </div>
 `;
+
+  // Create search bar.
   const searchBtn = rootEl.querySelector("#product-search-button");
   const searchBar = rootEl.querySelector("#product-search");
   const quantityBar = rootEl.querySelector("#product-quantity");
@@ -44,20 +47,39 @@ if (rootEl) {
       dropDown.innerHTML = ''; // Clear previous lists.
       //@ts-ignore search bar value
       var searchBarValue = searchBar.value;
-      if(searchBarValue.length <= 0) return; // Do not show results when empty.
+      if (searchBarValue.length <= 0) return; // Do not show results when empty.
       for (let key in planner.Products) {
         if (key.substring(0, searchBarValue.length).toUpperCase() == searchBarValue.toUpperCase()) { // Only show matching results.
           var productDiv = document.createElement("DIV");
           productDiv.innerHTML = key;
           productDiv.addEventListener("click", () => { // When clicked change value and close list.
-              var myValue = key;
-              //@ts-ignore search bar value
-              searchBar.value = myValue;
-              dropDown.innerHTML = '';
+            var myValue = key;
+            //@ts-ignore search bar value
+            searchBar.value = myValue;
+            dropDown.innerHTML = '';
           })
           dropDown.appendChild(productDiv);
         }
       }
     })
   }
+
+  // Initialize engine for HTML canvas.
+  const canvas2D = rootEl.querySelector("#output-canvas");
+  if(canvas2D){
+    Engine.Initialize2DHtmlCanvas(canvas2D as HTMLCanvasElement);
+  }
 }
+
+// Start engine render loop.
+var EngineRenderTimerId: number = 0;
+const nextFrame = (timestamp: DOMHighResTimeStamp) => {
+  Engine.Render();
+  EngineRenderTimerId = requestAnimationFrame(nextFrame);
+}
+//EngineRenderTimerId = requestAnimationFrame(nextFrame);
+// Start engine logic loop.
+var EngineLogicInterval = setInterval(function() {
+  Engine.Clock();
+  Engine.Render();
+}, 500);

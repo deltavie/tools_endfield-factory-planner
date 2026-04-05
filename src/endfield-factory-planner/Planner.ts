@@ -55,6 +55,7 @@ export class Planner {
         this.CurrentProductChain.DeleteChain(); // Clean up old chain.
         this._DepthTable = {}; // Clean up depth table.
         this.CurrentProductChain.StartNode = this.GenerateProductChain(product, countPerMinute);
+        this.CurrentProductChain.VisualizeChain();
         console.log(this.CurrentProductChain.StartNode);
     }
 
