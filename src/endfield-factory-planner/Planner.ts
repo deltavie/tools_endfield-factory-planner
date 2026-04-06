@@ -103,6 +103,7 @@ export class Planner {
                 var OutputNode: ProductChainNode = new ProductChainNode();
                 OutputNode.ProductName = output.name;
                 OutputNode.ProductQuantity = output.count*countPerMinute;
+                OutputNode.CraftingStation = "Excess";
                 OutputNode.Depth = depth-1; // Calculate depth and width of new created output node.
                 OutputNode.Width = this._DepthTable[depth-1];
                 this._DepthTable[depth-1]++;
