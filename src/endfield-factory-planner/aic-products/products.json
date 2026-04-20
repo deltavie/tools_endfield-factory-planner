@@ -1693,5 +1693,214 @@
                 ]
             }
         ]
-    }
+    },
+    "Liquid Heavy Xiranite": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Heavy Xiranite",
+                        "count": 1
+                    },
+                    {
+                        "name": "Precipitation Acid",
+                        "count": 1
+                    }
+                ],
+                "Crafting": "Reactor Crucible",
+                "CraftingTime": 2,
+                "Outputs": [
+                    {
+                        "name": "Liquid Heavy Xiranite",
+                        "count": 1
+                    }
+                ]
+            },
+                        {
+                "Ingredients": [
+                    {
+                        "name": "Heavy Xiranite",
+                        "count": 1
+                    },
+                    {
+                        "name": "Precipitation Acid",
+                        "count": 1
+                    }
+                ],
+                "Crafting": "Expanded Crucible",
+                "CraftingTime": 2,
+                "Outputs": [
+                    {
+                        "name": "Liquid Heavy Xiranite",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Cuprium Solution": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Cuprium Powder",
+                        "count": 1
+                    },
+                    {
+                        "name": "Precipitation Acid",
+                        "count": 1
+                    }
+                ],
+                "Crafting": "Reactor Crucible",
+                "CraftingTime": 2,
+                "Outputs": [
+                    {
+                        "name": "Cuprium Solution",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Hetonite Solution": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Cuprium Solution",
+                        "count": 4
+                    }
+                ],
+                "Crafting": "Purification Unit",
+                "CraftingTime": 2,
+                "Outputs": [
+                    {
+                        "name": "Hetonite Solution",
+                        "count": 1
+                    },
+                    {
+                        "name": "Precipitation Acid",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Hetonite": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Hetonite Solution",
+                        "count": 2
+                    },
+                    {
+                        "name": "Ferrium Powder",
+                        "count": 1
+                    }
+                ],
+                "Crafting": "Reactor Crucible",
+                "CraftingTime": 2,
+                "Outputs": [
+                    {
+                        "name": "Hetonite",
+                        "count": 1
+                    },
+                    {
+                        "name": "Sewage",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Hetonite Bottle": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Hetonite",
+                        "count": 2
+                    }
+                ],
+                "Crafting": "Moulding Unit",
+                "CraftingTime": 2,
+                "Outputs": [
+                    {
+                        "name": "Hetonite Bottle",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Hetonite Part": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Hetonite",
+                        "count": 5
+                    }
+                ],
+                "Crafting": "Fitting Unit",
+                "CraftingTime": 10,
+                "Outputs": [
+                    {
+                        "name": "Hetonite Part",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Hetonite Component": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Hetonite Part",
+                        "count": 2
+                    },
+                    {
+                        "name": "Heavy Xiranite",
+                        "count": 2
+                    }
+                ],
+                "Crafting": "Gearing Unit",
+                "CraftingTime": 10,
+                "Outputs": [
+                    {
+                        "name": "Hetonite Component",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Heavy Xiranite": {
+        "Formulas": [
+            {
+                "Ingredients": [
+                    {
+                        "name": "Xiranite",
+                        "count": 10
+                    },
+                    {
+                        "name": "Xicron Effluent",
+                        "count": 5
+                    }
+                ],
+                "Crafting": "Forge of the Sky",
+                "CraftingTime": 10,
+                "Outputs": [
+                    {
+                        "name": "Heavy Xiranite",
+                        "count": 1
+                    }
+                ]
+            }
+        ]
+    },
+    "Precipitation Acid" : {"Formulas": []}
 }
